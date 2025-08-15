@@ -1,0 +1,119 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+section {
+  position: relative;
+  height: 30vh;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 2em;
+}
+.sectionPic {
+  z-index: 2;
+  position: relative;
+  justify-self: right;
+  padding-left: 2em;
+}
+.profilePic {
+  height: 30vh;
+  box-shadow: 5px 4px 2px 1px rgba(47, 47, 48, 0.2);
+}
+
+.sectionBio {
+  background-color: #fff;
+  grid-column: 2 / 3;
+
+  align-self: center;
+  width: 85%;
+  height: 40%;
+
+  padding: 2em 2em 2em 1em;
+  box-shadow: 3px 5px 2px 1px rgba(47, 47, 48, 0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+section::before {
+  position: absolute;
+  z-index: -1;
+  content: " ";
+  background-image: linear-gradient(
+    177deg,
+    #347994 calc(70% + 2px),
+    #ffffff calc(70.5% + 2px)
+  );
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -5em;
+}
+
+/* Main section */
+main {
+  height: 40%;
+  margin-top: 4em;
+  padding: 0 4em 4em 4em;
+  display: grid;
+  gap: 1em;
+  grid-template-rows: 1fr 6fr;
+}
+.heading {
+  margin-bottom: -1em;
+  align-self: flex-end;
+}
+.allProjects {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.projectTile {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  box-shadow: 3px 5px 2px 1px rgba(47, 47, 48, 0.2),
+    -2px -2px rgb(226, 223, 223);
+}
+.projectTile > div {
+  padding: 0 1em 0.5em 1em;
+}
+.projectHeading {
+  font-size: large;
+  grid-column: 1 / 2;
+}
+.projectPicture {
+  background-color: #775555;
+}
+.projectInfo {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+.projectLinks {
+  align-self: center;
+  justify-self: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.projectDesc {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Footer */
+footer {
+  /* padding: 2em; */
+  width: 100%;
+  /* position: fixed; */
+  bottom: 0px;
+
+  background-color: #347994;
+}
+.footer {
+  padding: 2em;
+}
