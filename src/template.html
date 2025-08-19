@@ -9,11 +9,17 @@
     <section>
       <div class="top">
         <div class="sectionPic">
-          <img
-            class="profilePic"
-            src="./images/profilePicSmall.jpg"
-            alt="Picture of designer"
-          />
+          <picture>
+            <source
+              srcset="./images/profilePicWide.jpg"
+              media="(min-width:1000px)"
+            />
+            <img
+              class="profilePic"
+              src="./images/profilePicSmall.jpg"
+              alt="Picture of designer"
+            />
+          </picture>
         </div>
 
         <div class="sectionBio">
@@ -259,5 +265,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="testGrid">
+      <div class="leftDiv"><img src="./images/profilePic.jpg" alt="" /></div>
+      <div class="midDiv">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sequi
+        sit voluptate quas repellendus? Voluptatem necessitatibus, deserunt quia
+        quae hic deleniti, magni veniam, enim porro eveniet iste nisi
+        accusantium excepturi. Lorem
+      </div>
+    </div>
   </body>
 </html>
