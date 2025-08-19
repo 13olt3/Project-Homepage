@@ -15,36 +15,49 @@ body {
 }
 section {
   position: relative;
-  height: 30vh;
+  height: 35%;
 }
 
-@media (min-width: 821px) {
-}
 .top {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
   padding: 2em;
 }
+
 .sectionPic {
   z-index: 2;
   position: relative;
-  justify-self: right;
-  padding-left: 2em;
+  /* padding-left: 2em; */
+  float: left;
+  shape-outside: margin-box;
+  padding-right: 4em;
 }
+
 .profilePic {
-  height: 30vh;
+  position: relative;
+  height: 250px;
   box-shadow: 5px 4px 2px 1px rgba(47, 47, 48, 0.2);
+  transform: scale(140%);
+  /* opacity: 10%; */
+  float: left;
+}
+.sectionPic::before {
+  position: absolute;
+  right: 5em;
+  bottom: -1.5em;
+  content: "Website Creator";
+  font-size: x-large;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  z-index: 3;
+  transform: scale(200%);
+  text-shadow: 2px 2px rgb(82, 78, 78);
 }
 .sectionBio {
   background-color: #fff;
-  grid-column: 2 / 3;
+  margin: 3em 6em 0 8em;
+  padding: 0.5em 2em 1em 0;
 
-  align-self: center;
-  width: 85%;
-  padding: 1em 2em 2em 1em;
   box-shadow: 3px 5px 2px 1px rgba(47, 47, 48, 0.2);
   z-index: 1;
-  display: grid;
 }
 .externalLinks {
   justify-self: end;
@@ -188,18 +201,27 @@ a {
   .top {
     display: block;
   }
+  .profilePic {
+    height: 25vh;
+  }
   .sectionPic {
     position: relative;
     justify-self: left;
+    float: left;
   }
   .externalLinks {
     display: none;
+  }
+  .sectionBio {
+    margin-top: 4em;
+
+    width: auto;
   }
 }
 
 .leftDiv {
   position: relative;
-  /* float: left; */
+  float: left;
   shape-outside: padding-box;
   padding-right: 5em;
   /* transform: scale(1.5); */
